@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#Button1").click(function () {
+          if ($("#Checkbox1").prop("checked") == true) {
+            $("#output").html("チェック項目1がチェックされています。<br/>");
+          } else {
+            $("#output").html("チェック項目1がチェックされていません。<br/>");
+          }
+
+          if ($("#Checkbox2:checked").val() == "on") {
+            $("#output").html($("#output").html() + "チェック項目2がチェックされています。<br/>");
+          } else {
+            $("#output").html($("#output").html() + "チェック項目2がチェックされていません。<br/>");
+          }
+        })
+      })
+    </script>
+
+</head>
+<body>
+  <form name="form1" action="">
+    <input id="Checkbox1" type="checkbox" /><label for="Checkbox1">チェック項目1</label><br />
+    <input id="Checkbox2" type="checkbox" /><label for="Checkbox2">チェック項目2</label><br />
+    <input id="Button1" type="button" value="Exec" />
+  </form>
+
+  <div id="output"></div>
+</body>
+</html>
