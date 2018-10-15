@@ -5,12 +5,33 @@
   <title>たいとる</title>
 </head>
 <body>
-  <input type="button" id="btn01" value="確認">
+  <form id="form" method="post" action="form.php">
+	<table>
+		<tr>
+      <td><input type="checkbox" name="name" value="true"></td>
+			<th>名前</th>
+		</tr>
+		<tr>
+      <td><input type="checkbox" name="address" value="true"></td>
+			<th>住所</th>
+		</tr>
+		<tr>
+      <td><input type="checkbox" name="phone_number" value="true"></td>
+			<th>電話番号</th>
+		</tr>
+
+			<td colspan="2">
+				<input type="reset" value="reset">
+				<input type="submit" value="send">
+			</td>
+		</tr>
+	</table>
+</form>
 
 
-          <!-- bodyを閉じる直前でjQueryを読み込む -->
-      <script type="text/javascript" src="js/jquery.js"></script>
+  <!-- bodyを閉じる直前でjQueryを読み込む -->
+  <script type="text/javascript" src="js/jquery.js"></script>
 
-      <script type="text/javascript"src="js/sample.js"></script>
+  <script type="text/javascript"src="js/sample.js"></script>
 </body>
 </html>
